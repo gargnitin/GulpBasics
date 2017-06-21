@@ -12,6 +12,7 @@ var browserSync = require('browser-sync').create();
 var $ = require('gulp-load-plugins')();
 var clean = require('gulp-clean');
 var plumber = require('gulp-plumber');
+var taskListing = require('gulp-task-listing');
 
 
 
@@ -31,6 +32,8 @@ gulp.task('default', ['css', 'js', 'inject', 'connect', 'watch'], function(){
     console.log("gulp default task is running");
     
 })
+
+gulp.task('help', taskListing);
 
 
 function cleanup(folderpath){
